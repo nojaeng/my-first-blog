@@ -10,7 +10,15 @@
 <body>
     <div class="page-header">
         <h1><a href="/">Beauty & the Beast</a></h1>
-    </div>
+        <p>
+            New Post:
+            {% if user.is_authenticated %}
+            <a href="{% url 'post_new' %}" <button type="button" class="btn btn-default btn-sm">
+          <span class="glyphicon glyphicon-plus"></span> Plus </a>
+            {% endif %}
+            <!-- <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+    -->
+</div>
     <div class="content container">
         <div class="row">
             <div class="col-md-8">
